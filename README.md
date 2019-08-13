@@ -2,6 +2,7 @@
 Travaux dans le cadre du stage Juillet/Août 2019
 
 Ce dépôt comporte :
+  
   -Un rapport sous format pdf décrivant les travaux réalisés
   
   -Un dossier contenant les fichiers permettant de faire fonctionner le réseau de neurones
