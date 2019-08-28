@@ -114,7 +114,7 @@ if __name__ == "__main__":
         logits = inference(test_image_transformed, is_training=False, batch_norm=True)
         pred = tf.argmax(logits, dimension=3)[0]
         saver = tf.train.Saver(tf.all_variables())
-        ckpt_path = "checkpoints/(8,105)aug/"
+        ckpt_path = "checkpoints/"
         #ckpt_path = "valid_ckpt/newckpt" #Uncomment if you want to use a saved checkpoint from an other training to predict
         ckpt = tf.train.get_checkpoint_state(ckpt_path)
         #from ipdb import set_trace
