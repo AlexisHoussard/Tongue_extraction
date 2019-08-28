@@ -373,10 +373,12 @@ def train(n_epochs):
                 summary_writer.add_summary(summary_str, step)
             if step % 250 == 0 :
                 saver.save(sess,ckpt_path+ 'model.ckpt',step) #makes a checkpoint every 250 steps
-                imgs = os.listdir('test_num_epoch/')
-                for im in imgs:
-                    command = '"python predict.py test_num_epoch/' + im + ' ' + str(step) + '; sleep 1;exit; bash" '
-                    os.system('gnome-terminal -- bash -c ' + command)
+                
+                # I added this to find manually the best checkpoint
+                #imgs = os.listdir('test_num_epoch/')
+                #for im in imgs:
+                    #command = '"python predict.py test_num_epoch/' + im + ' ' + str(step) + '; sleep 1;exit; bash" '
+                    #os.system('gnome-terminal -- bash -c ' + command)
             if step % 100==0:
                 print('Step %d: loss = %.5f dice=%.2f (%.3f sec) ' % (step, loss_value,dice_value,duration))
             step += 1
