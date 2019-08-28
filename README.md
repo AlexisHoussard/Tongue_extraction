@@ -1,4 +1,4 @@
-# Tongue_extraction
+# UltrasoundImageSegmentation
 Travaux dans le cadre du stage Juillet/Août 2019
 
 Ce dépôt comporte :
